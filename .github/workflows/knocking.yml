@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: install knockpy
+        run: sudo python setup.py install
       - name: test for subdomains
-        run: knock ${{ github.event.inputs.domain }}
+        run: knockpy ${{ github.event.inputs.domain }}
 
