@@ -2,7 +2,7 @@ on:
   workflow_dispatch:
     inputs:
       domain:
-        description: 'domain to knock'
+        description: 'domain to scan for subdomains'
         required: true
         default: 'github.com'
         
