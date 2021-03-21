@@ -1,8 +1,16 @@
 on: 
-  workflow_dispatch
- 
-knock:
-  - uses: actions/checkout
-  
+  workflow_dispatch:
+    inputs:
+      domain:
+        description: 'domain to knock'
+        required: true
+        default: 'github.com'
+        
+jobs:
   knock:
-  - uses: guelfoweb/knock
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: test for subdomains
+        run: knock "${{ github.event.inputs.main ))"
+
