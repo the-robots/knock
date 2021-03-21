@@ -1,0 +1,8 @@
+on: 
+  workflow_dispatch
+ 
+knock:
+  - uses: actions/checkout
+  
+  knock:
+  - uses: guelfoweb/knock
